@@ -31,6 +31,39 @@ Install the dependencies:
 npm install
 ```
 
+- shadcn@2.4.0-canary.12 
+  - React Router7 이 React19를 사용해서 호환성 문제가 있음 "--legacy-peer-deps" 옵션을 사용하여 의존성 패키지 설치
+
+```bash
+npx shadcn@latest init
+```
+```bash
+Need to install the following packages:
+shadcn@2.4.0-canary.12
+Ok to proceed? (y) y
+
+✔ Preflight checks.
+✔ Verifying framework. Found React Router.
+✔ Validating Tailwind CSS config. Found v4.
+✔ Validating import alias.
+✔ Which color would you like to use as the base color? › Neutral
+✔ Writing components.json.
+✔ Checking registry.
+✔ Updating app/app.css
+  Installing dependencies.
+
+It looks like you are using React 19. 
+Some packages may fail to install due to peer dependency issues in npm (see https://ui.shadcn.com/react-19).
+
+✔ How would you like to proceed? › Use --legacy-peer-deps
+✔ Installing dependencies.
+✔ Created 1 file:
+  - app/lib/utils.ts
+
+Success! Project initialization completed.
+You may now add components.
+```
+
 ### Development
 
 Start the development server with HMR:
@@ -49,41 +82,7 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
 
 ## Styling
 
