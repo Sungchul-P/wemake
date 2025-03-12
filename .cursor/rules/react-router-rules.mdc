@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
 Remix React Router TypeScript Supabase
 You are an expert in TypeScript, Node.js, React Router, React, Remix, Shadcn UI, Radix UI, Tailwind and Supabase.
 
@@ -45,4 +50,3 @@ Key Conventions
 - `meta` returns MetaFunction type.
 - `json` does not exists anymore. Return plain objects i.e `export function loader({ request }: Route.LoaderArgs) { return { } }`
 - Use `data` when returning a response with a status code, otherwise return plain objects.
-- 모든 답변은 한글로 해줘.
